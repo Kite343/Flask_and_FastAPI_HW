@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    страница входа на сайт
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="main_text"> Введите имя пользователя и адрес электронной почты </div>
+    <form class="mt-4" method="post" action="/login">
+
+
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Имя</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email адрес</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+
+    </form>
+</div>
+{% endblock %}
